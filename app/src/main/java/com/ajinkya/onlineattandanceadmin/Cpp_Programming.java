@@ -1,57 +1,95 @@
 package com.ajinkya.onlineattandanceadmin;
 
-import android.content.Intent;
+import android.annotation.SuppressLint;
 import android.os.Bundle;
+import android.view.Menu;
+import android.view.MenuItem;
 import android.view.View;
-import android.widget.Button;
-import android.widget.EditText;
+import android.widget.ProgressBar;
+import android.widget.SearchView;
 import android.widget.Toast;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.ValueEventListener;
+
+import java.util.ArrayList;
+
 
 public class Cpp_Programming extends AppCompatActivity {
 
-     EditText cpp_name,cpp_branch,cpp_roll_number;
-     Button uploadAttendancebtn;
+    private ProgressBar Cpp_progressbar;
+    SearchView mysearchview;
+    RecyclerView Cpp_recyleview;
 
-
+    DatabaseReference database;
+    myadapter myadapter1;
+    ArrayList<Allsubject>list;
+    @SuppressLint("MissingInflatedId")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_cpp_programming);
+        setContentView(R.layout.activity_cprogramming);
 
+        //progressbar
+        Cpp_progressbar = findViewById(R.id.c_progressbar);
+        Cpp_recyleview = findViewById(R.id.c_recycleview);
+        database = FirebaseDatabase.getInstance().getReference("Cpp");
+        Cpp_recyleview.setHasFixedSize(true);
+        Cpp_recyleview.setLayoutManager(new LinearLayoutManager(this));
+
+
+//SearchView
+
+
+
+
+
+        list = new ArrayList<>();
+
+        myadapter1 = new myadapter(this,list);
+        Cpp_recyleview.setAdapter(myadapter1);
+
+        database.addValueEventListener(new ValueEventListener() {
+            @Override
+            public void onDataChange(@NonNull DataSnapshot snapshot) {
+                Cpp_progressbar.setVisibility(View.VISIBLE);
+                for (DataSnapshot dataSnapshot : snapshot.getChildren()) {
+
+                    Allsubject allsubject = dataSnapshot.getValue(Allsubject.class);
+                    list.add(allsubject);
+
+
+                }
+                Cpp_progressbar.setVisibility(View.GONE);
+                myadapter1.notifyDataSetChanged();
+
+            }
+            @Override
+            public void onCancelled(@NonNull DatabaseError error) {
+
+            }
+        });
 
     }
 
-//        public void process(View view)
-//        {
-//            cpp_name = findViewById(R.id.Cpp_name);
-//            cpp_branch = findViewById(R.id.Cpp_branch);
-//            cpp_roll_number = findViewById(R.id.Cpp_roll_number);
-//
-//
-//            String name=cpp_name.getText().toString().trim();
-//            String branch=cpp_branch.getText().toString().trim();
-//            String roll_no=cpp_roll_number.getText().toString().trim();
-//
-//            Javascript_Student_data javascript_student_data = new Javascript_Student_data(branch,roll_no);
-//
-//
-//            FirebaseDatabase firebaseDatabase = FirebaseDatabase.getInstance();
-//            DatabaseReference databaseReference = firebaseDatabase.getReference("Cpp");
-//
-//            databaseReference.child(name).setValue(javascript_student_data);
-//
-//            cpp_name.setText(" ");
-//            cpp_branch.setText(" ");
-//            cpp_roll_number.setText(" ");
-//
-//            Toast.makeText(this, "Data Inserted Successfully", Toast.LENGTH_LONG).show();
-// Intent i = new Intent(Cpp_Programming.this,MainActivity.class);
-// startActivity(i);
-//        }
 
-    }
+//public boolean onCreateOptionsMenu(Menu menu)
+//{
+//    getMenuInflater().inflate(R.menu.searchmenu,menu);
+//    MenuItem menuItem = menu.findItem(R.id.search);
+//    SearchView searchView = (SearchView) menu
+//}
+//
+
+
+
+
+}

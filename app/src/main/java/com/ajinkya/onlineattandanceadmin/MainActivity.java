@@ -6,6 +6,7 @@ import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.ProgressBar;
 
 import com.ajinkya.onlineattandanceadmin.Advance_java_Programming;
 import com.ajinkya.onlineattandanceadmin.C_Programming;
@@ -20,13 +21,16 @@ public class MainActivity extends AppCompatActivity {
 
     MaterialCardView main_mcv_c, main_mcv_cpp,main_mcv_java,main_mcv_advance_java,main_mcv_javascript,main_mcv_php;
 
-
+ProgressBar c_progressbar;
     @SuppressLint("MissingInflatedId")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+//progressbar
+
+        c_progressbar = findViewById(R.id.c_progressbar);
 
         main_mcv_c = findViewById(R.id.main_mcv_c);
         main_mcv_cpp = findViewById(R.id.main_mcv_cpp);
@@ -89,8 +93,11 @@ public class MainActivity extends AppCompatActivity {
         main_mcv_c.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+
                 Intent i = new Intent(MainActivity.this, C_Programming.class);
                 startActivity(i);
+
+              //  c_progressbar.setVisibility(View.GONE);
             }
         });
 

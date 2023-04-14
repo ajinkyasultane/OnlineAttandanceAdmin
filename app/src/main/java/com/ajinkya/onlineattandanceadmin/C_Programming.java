@@ -4,6 +4,8 @@ import android.annotation.SuppressLint;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.ProgressBar;
 import android.widget.SearchView;
 import android.widget.Toast;
 
@@ -23,6 +25,7 @@ import java.util.ArrayList;
 
 public class C_Programming extends AppCompatActivity {
 
+    private ProgressBar C_progressbar;
     SearchView mysearchview;
     RecyclerView C_recyleview;
 
@@ -35,10 +38,14 @@ ArrayList<Allsubject>list;
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_cprogramming);
 
+        //progressbar
+        C_progressbar = findViewById(R.id.c_progressbar);
         C_recyleview = findViewById(R.id.c_recycleview);
         database = FirebaseDatabase.getInstance().getReference("C");
         C_recyleview.setHasFixedSize(true);
         C_recyleview.setLayoutManager(new LinearLayoutManager(this));
+
+
 //SearchView
 
 
@@ -53,14 +60,17 @@ ArrayList<Allsubject>list;
         database.addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot snapshot) {
+                C_progressbar.setVisibility(View.VISIBLE);
                 for (DataSnapshot dataSnapshot : snapshot.getChildren()) {
 
                     Allsubject allsubject = dataSnapshot.getValue(Allsubject.class);
                     list.add(allsubject);
 
-                }
 
+                }
+C_progressbar.setVisibility(View.GONE);
                 myadapter1.notifyDataSetChanged();
+
             }
             @Override
             public void onCancelled(@NonNull DatabaseError error) {

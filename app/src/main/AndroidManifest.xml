@@ -14,6 +14,12 @@
         android:theme="@style/Theme.OnlineAttandanceAdmin"
         tools:targetApi="31">
         <activity
+            android:name=".C_programming"
+            android:exported="false" />
+        <activity
+            android:name=".if_first_sem_subject"
+            android:exported="false" />
+        <activity
             android:name=".Co_third_sem_subject"
             android:exported="false" />
         <activity

@@ -10,20 +10,20 @@ import android.widget.ProgressBar;
 
 import com.google.android.material.card.MaterialCardView;
 
-public class MainActivity extends AppCompatActivity {
+public class if_first_sem_subject extends AppCompatActivity {
 
     MaterialCardView main_mcv_c, main_mcv_cpp,main_mcv_java,main_mcv_advance_java,main_mcv_javascript,main_mcv_php;
 
-ProgressBar c_progressbar;
+    ProgressBar c_progressbar;
     @SuppressLint("MissingInflatedId")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_if_first_sem_subject2);
 
 //progressbar
 
-       // c_progressbar = findViewById(R.id.C_progressbar);
+        c_progressbar = findViewById(R.id.C_progressbar);
 
         main_mcv_c = findViewById(R.id.main_mcv_c);
         main_mcv_cpp = findViewById(R.id.main_mcv_cpp);
@@ -37,7 +37,7 @@ ProgressBar c_progressbar;
         main_mcv_c.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent i = new Intent(MainActivity.this, C_programming.class);
+                Intent i = new Intent(if_first_sem_subject.this, C_programming.class);
                 startActivity(i);
             }
         });
@@ -45,7 +45,7 @@ ProgressBar c_progressbar;
         main_mcv_cpp.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent i = new Intent(MainActivity.this, Cpp_Programming.class);
+                Intent i = new Intent(if_first_sem_subject.this, Cpp_Programming.class);
                 startActivity(i);
             }
         });
@@ -54,7 +54,7 @@ ProgressBar c_progressbar;
         main_mcv_java.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent i = new Intent(MainActivity.this, Java_Programming.class);
+                Intent i = new Intent(if_first_sem_subject.this, Java_Programming.class);
                 startActivity(i);
             }
         });
@@ -62,7 +62,7 @@ ProgressBar c_progressbar;
         main_mcv_advance_java.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent i = new Intent(MainActivity.this, Advance_java_Programming.class);
+                Intent i = new Intent(if_first_sem_subject.this, Advance_java_Programming.class);
                 startActivity(i);
             }
         });
@@ -70,7 +70,7 @@ ProgressBar c_progressbar;
         main_mcv_javascript.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent i = new Intent(MainActivity.this, Javascript.class);
+                Intent i = new Intent(if_first_sem_subject.this, Javascript.class);
                 startActivity(i);
             }
         });
@@ -78,21 +78,21 @@ ProgressBar c_progressbar;
         main_mcv_php.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent i = new Intent(MainActivity.this, PHP_Activity.class);
+                Intent i = new Intent(if_first_sem_subject.this, PHP_Activity.class);
                 startActivity(i);
             }
         });
 
-        main_mcv_c.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-
-                Intent i = new Intent(MainActivity.this, C_programming.class);
-                startActivity(i);
-
-              //  c_progressbar.setVisibility(View.GONE);
-            }
-        });
+//        main_mcv_c.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//
+//                Intent i = new Intent(if_first_sem_subject.this, C_Programming.class);
+//                startActivity(i);
+//
+//                //  c_progressbar.setVisibility(View.GONE);
+//            }
+        //  });
 
 
     }

@@ -40,45 +40,45 @@ public class HomeActivity extends AppCompatActivity {
         home_mcv_information_technology.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent i2 = new Intent(HomeActivity.this, CosemisterActivity.class);
+                Intent i2 = new Intent(HomeActivity.this, if_first_sem_subject.class);
                 startActivity(i2);
             }
         });
 
-        home_mcv_mechanical_engineering.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent i3= new Intent(HomeActivity.this, CosemisterActivity.class);
-                startActivity(i3);
-            }
-        });
-
-        home_mcv_civil_engineering.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent i4= new Intent(HomeActivity.this, CosemisterActivity.class);
-                startActivity(i4);
-            }
-        });
-
-        home_mcv_electrical_engineering.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent i5 = new Intent(HomeActivity.this, CosemisterActivity.class);
-                startActivity(i5);
-            }
-        });
-
-        home_mcv_electronic_engineering.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent i6 = new Intent(HomeActivity.this, CosemisterActivity.class);
-                startActivity(i6);
-            }
-        });
-
-
-
+//        home_mcv_mechanical_engineering.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                Intent i3= new Intent(HomeActivity.this, CosemisterActivity.class);
+//                startActivity(i3);
+//            }
+//        });
+//
+//        home_mcv_civil_engineering.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                Intent i4= new Intent(HomeActivity.this, CosemisterActivity.class);
+//                startActivity(i4);
+//            }
+//        });
+//
+//        home_mcv_electrical_engineering.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                Intent i5 = new Intent(HomeActivity.this, CosemisterActivity.class);
+//                startActivity(i5);
+//            }
+//        });
+//
+//        home_mcv_electronic_engineering.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                Intent i6 = new Intent(HomeActivity.this, CosemisterActivity.class);
+//                startActivity(i6);
+//            }
+//        });
+//
+//
+//
 
 
 

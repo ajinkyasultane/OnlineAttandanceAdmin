@@ -4,7 +4,9 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
+    android:backgroundTint="@color/lavender_back"
     android:layout_margin="5dp"
+    android:elevation="@drawable/custom_edittext"
     app:cardElevation="5dp">
 
     <LinearLayout
@@ -25,9 +27,9 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-        android:text="Branch ="
-        android:textSize="25sp"
-            android:textColor="@color/black"
+        android:text="Branch"
+        android:textSize="15sp"
+            android:textColor="@color/white"
             android:textStyle="bold"
             android:padding="10dp"
 
@@ -39,7 +41,8 @@
             android:id="@+id/tv_branch"
             android:layout_marginLeft="8dp"
             android:text="IT"
-            android:textSize="20sp"
+            android:textColor="@color/white"
+            android:textSize="14sp"
             android:textStyle="bold"
             android:padding="10dp"
 
@@ -58,8 +61,8 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Date ="
-                android:textSize="25sp"
-                android:textColor="@color/black"
+                android:textSize="15sp"
+                android:textColor="@color/white"
                 android:textStyle="bold"
                 android:padding="10dp"
 
@@ -71,7 +74,9 @@
                 android:id="@+id/tv_date"
                 android:layout_marginLeft="8dp"
                 android:text="14 April 2023"
-                android:textSize="20sp"
+                android:textColor="@color/white"
+
+                android:textSize="14sp"
                 android:textStyle="bold"
                 android:padding="10dp"
 
@@ -90,8 +95,8 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Name ="
-                android:textSize="25sp"
-                android:textColor="@color/black"
+                android:textSize="15sp"
+                android:textColor="@color/white"
                 android:textStyle="bold"
                 android:padding="10dp"
 
@@ -103,7 +108,9 @@
                 android:id="@+id/tv_name"
                 android:layout_marginLeft="8dp"
                 android:text="Ajinkya"
-                android:textSize="20sp"
+                android:textColor="@color/white"
+
+                android:textSize="14sp"
                 android:textStyle="bold"
                 android:padding="10dp"
 
@@ -122,8 +129,8 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="roll_no ="
-                android:textSize="25sp"
-                android:textColor="@color/black"
+                android:textSize="15sp"
+                android:textColor="@color/white"
                 android:textStyle="bold"
                 android:padding="10dp"
 
@@ -135,7 +142,9 @@
                 android:id="@+id/tv_roll_no"
                 android:layout_marginLeft="8dp"
                 android:text="42"
-                android:textSize="20sp"
+                android:textColor="@color/white"
+
+                android:textSize="14sp"
                 android:textStyle="bold"
                 android:padding="10dp"
 
@@ -154,8 +163,8 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Time ="
-                android:textSize="25sp"
-                android:textColor="@color/black"
+                android:textSize="15sp"
+                android:textColor="@color/white"
                 android:textStyle="bold"
                 android:padding="10dp"
 
@@ -167,7 +176,9 @@
                 android:id="@+id/tv_time"
                 android:layout_marginLeft="8dp"
                 android:text="time"
-                android:textSize="20sp"
+                android:textColor="@color/white"
+
+                android:textSize="14sp"
                 android:textStyle="bold"
                 android:padding="10dp"
 

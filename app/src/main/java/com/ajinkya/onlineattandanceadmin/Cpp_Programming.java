@@ -39,8 +39,8 @@ public class Cpp_Programming extends AppCompatActivity {
         setContentView(R.layout.activity_cprogramming);
 
         //progressbar
-        Cpp_progressbar = findViewById(R.id.c_progressbar);
-        Cpp_recyleview = findViewById(R.id.c_recycleview);
+        Cpp_progressbar = findViewById(R.id.C_progressbar);
+        Cpp_recyleview = findViewById(R.id.C_recycleview);
         database = FirebaseDatabase.getInstance().getReference("Cpp");
         Cpp_recyleview.setHasFixedSize(true);
         Cpp_recyleview.setLayoutManager(new LinearLayoutManager(this));

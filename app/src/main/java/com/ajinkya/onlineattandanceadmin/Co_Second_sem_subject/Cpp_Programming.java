@@ -1,4 +1,4 @@
-package com.ajinkya.onlineattandanceadmin;
+package com.ajinkya.onlineattandanceadmin.Co_Second_sem_subject;
 
 import android.annotation.SuppressLint;
 import android.os.Bundle;
@@ -11,6 +11,9 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.ajinkya.onlineattandanceadmin.Allsubject;
+import com.ajinkya.onlineattandanceadmin.R;
+import com.ajinkya.onlineattandanceadmin.myadapter;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
@@ -20,7 +23,7 @@ import com.google.firebase.database.ValueEventListener;
 import java.util.ArrayList;
 
 
-public class C_Programming extends AppCompatActivity {
+public class Cpp_Programming extends AppCompatActivity {
 
     private ProgressBar Cpp_progressbar;
     SearchView mysearchview;
@@ -36,8 +39,8 @@ public class C_Programming extends AppCompatActivity {
         setContentView(R.layout.activity_cprogramming);
 
         //progressbar
-        Cpp_progressbar = findViewById(R.id.c_progressbar);
-        Cpp_recyleview = findViewById(R.id.c_recycleview);
+        Cpp_progressbar = findViewById(R.id.cpp_progressbar);
+        Cpp_recyleview = findViewById(R.id.cpp_recycleview);
         database = FirebaseDatabase.getInstance().getReference("Cpp");
         Cpp_recyleview.setHasFixedSize(true);
         Cpp_recyleview.setLayoutManager(new LinearLayoutManager(this));

@@ -1,16 +1,24 @@
-package com.ajinkya.onlineattandanceadmin;
+package com.ajinkya.onlineattandanceadmin.Co_first_sem_subject;
+
+
 
 import android.annotation.SuppressLint;
 import android.os.Bundle;
+import android.view.Menu;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.ProgressBar;
 import android.widget.SearchView;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.ajinkya.onlineattandanceadmin.Allsubject;
+import com.ajinkya.onlineattandanceadmin.R;
+import com.ajinkya.onlineattandanceadmin.myadapter;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
@@ -20,27 +28,27 @@ import com.google.firebase.database.ValueEventListener;
 import java.util.ArrayList;
 
 
-public class C_Programming extends AppCompatActivity {
+public class Co_first_sem_English  extends AppCompatActivity {
 
-    private ProgressBar Cpp_progressbar;
+    private ProgressBar Co_first_sem_english_progressbar;
     SearchView mysearchview;
-    RecyclerView Cpp_recyleview;
+    RecyclerView Co_first_sem_english_recyleview;
 
     DatabaseReference database;
-    com.ajinkya.onlineattandanceadmin.myadapter myadapter1;
-    ArrayList<com.ajinkya.onlineattandanceadmin.Allsubject>list;
+    myadapter myadapter1;
+    ArrayList<Allsubject>list;
     @SuppressLint("MissingInflatedId")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_cprogramming);
+        setContentView(R.layout.activity_co_first_sem_english);
 
         //progressbar
-        Cpp_progressbar = findViewById(R.id.c_progressbar);
-        Cpp_recyleview = findViewById(R.id.c_recycleview);
+        Co_first_sem_english_progressbar = findViewById(R.id.co_first_sem_english_progressbar);
+        Co_first_sem_english_recyleview = findViewById(R.id.co_first_sem_english_recycleview);
         database = FirebaseDatabase.getInstance().getReference("Cpp");
-        Cpp_recyleview.setHasFixedSize(true);
-        Cpp_recyleview.setLayoutManager(new LinearLayoutManager(this));
+        Co_first_sem_english_recyleview.setHasFixedSize(true);
+        Co_first_sem_english_recyleview.setLayoutManager(new LinearLayoutManager(this));
 
 
 //SearchView
@@ -52,20 +60,20 @@ public class C_Programming extends AppCompatActivity {
         list = new ArrayList<>();
 
         myadapter1 = new myadapter(this,list);
-        Cpp_recyleview.setAdapter(myadapter1);
+        Co_first_sem_english_recyleview.setAdapter(myadapter1);
 
         database.addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot snapshot) {
-                Cpp_progressbar.setVisibility(View.VISIBLE);
+                Co_first_sem_english_progressbar.setVisibility(View.VISIBLE);
                 for (DataSnapshot dataSnapshot : snapshot.getChildren()) {
 
-                    com.ajinkya.onlineattandanceadmin.Allsubject allsubject = dataSnapshot.getValue(Allsubject.class);
+                    Allsubject allsubject = dataSnapshot.getValue(Allsubject.class);
                     list.add(allsubject);
 
 
                 }
-                Cpp_progressbar.setVisibility(View.GONE);
+                Co_first_sem_english_progressbar.setVisibility(View.GONE);
                 myadapter1.notifyDataSetChanged();
 
             }

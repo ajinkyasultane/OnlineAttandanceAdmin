@@ -1,4 +1,9 @@
-package com.ajinkya.onlineattandanceadmin;
+package com.ajinkya.onlineattandanceadmin.Co_first_sem_subject;
+
+import androidx.annotation.NonNull;
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 
 import android.annotation.SuppressLint;
 import android.os.Bundle;
@@ -6,11 +11,9 @@ import android.view.View;
 import android.widget.ProgressBar;
 import android.widget.SearchView;
 
-import androidx.annotation.NonNull;
-import androidx.appcompat.app.AppCompatActivity;
-import androidx.recyclerview.widget.LinearLayoutManager;
-import androidx.recyclerview.widget.RecyclerView;
-
+import com.ajinkya.onlineattandanceadmin.Allsubject;
+import com.ajinkya.onlineattandanceadmin.R;
+import com.ajinkya.onlineattandanceadmin.myadapter;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
@@ -19,16 +22,15 @@ import com.google.firebase.database.ValueEventListener;
 
 import java.util.ArrayList;
 
-
-public class C_Programming extends AppCompatActivity {
+public class Co_first_sem_basic_science extends AppCompatActivity {
 
     private ProgressBar Cpp_progressbar;
-    SearchView mysearchview;
+//    SearchView mysearchview;
     RecyclerView Cpp_recyleview;
 
     DatabaseReference database;
     com.ajinkya.onlineattandanceadmin.myadapter myadapter1;
-    ArrayList<com.ajinkya.onlineattandanceadmin.Allsubject>list;
+    ArrayList<com.ajinkya.onlineattandanceadmin.Allsubject> list;
     @SuppressLint("MissingInflatedId")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -36,8 +38,8 @@ public class C_Programming extends AppCompatActivity {
         setContentView(R.layout.activity_cprogramming);
 
         //progressbar
-        Cpp_progressbar = findViewById(R.id.c_progressbar);
-        Cpp_recyleview = findViewById(R.id.c_recycleview);
+        Cpp_progressbar = findViewById(R.id.cpp_progressbar);
+        Cpp_recyleview = findViewById(R.id.cpp_recycleview);
         database = FirebaseDatabase.getInstance().getReference("Cpp");
         Cpp_recyleview.setHasFixedSize(true);
         Cpp_recyleview.setLayoutManager(new LinearLayoutManager(this));

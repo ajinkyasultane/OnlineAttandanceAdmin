@@ -4,6 +4,6 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".SubjectActivity">
+    tools:context=".Co_first_sem_subject.Co_first_sem_math">
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -7,7 +7,7 @@
     android:layout_height="match_parent"
     android:layout_gravity="center"
     android:orientation="vertical"
-    tools:context=".Co_Second_sem_subject.Cpp_Programming">
+    tools:context=".Co_first_sem_subject.Co_first_sem_basic_science">
 
     <!--    <android.support.v7.widget.SearchView-->
     <!--        android:layout_width="match_parent"-->

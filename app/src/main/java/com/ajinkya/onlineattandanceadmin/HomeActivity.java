@@ -30,7 +30,7 @@ public class HomeActivity extends AppCompatActivity {
         home_mcv_computer_science.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent i1 = new Intent(HomeActivity.this,SemisterActivity.class);
+                Intent i1 = new Intent(HomeActivity.this, CosemisterActivity.class);
              startActivity(i1);
 }
     });
@@ -40,7 +40,7 @@ public class HomeActivity extends AppCompatActivity {
         home_mcv_information_technology.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent i2 = new Intent(HomeActivity.this,SemisterActivity.class);
+                Intent i2 = new Intent(HomeActivity.this, CosemisterActivity.class);
                 startActivity(i2);
             }
         });
@@ -48,7 +48,7 @@ public class HomeActivity extends AppCompatActivity {
         home_mcv_mechanical_engineering.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent i3= new Intent(HomeActivity.this,SemisterActivity.class);
+                Intent i3= new Intent(HomeActivity.this, CosemisterActivity.class);
                 startActivity(i3);
             }
         });
@@ -56,7 +56,7 @@ public class HomeActivity extends AppCompatActivity {
         home_mcv_civil_engineering.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent i4= new Intent(HomeActivity.this,SemisterActivity.class);
+                Intent i4= new Intent(HomeActivity.this, CosemisterActivity.class);
                 startActivity(i4);
             }
         });
@@ -64,7 +64,7 @@ public class HomeActivity extends AppCompatActivity {
         home_mcv_electrical_engineering.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent i5 = new Intent(HomeActivity.this,SemisterActivity.class);
+                Intent i5 = new Intent(HomeActivity.this, CosemisterActivity.class);
                 startActivity(i5);
             }
         });
@@ -72,7 +72,7 @@ public class HomeActivity extends AppCompatActivity {
         home_mcv_electronic_engineering.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent i6 = new Intent(HomeActivity.this,SemisterActivity.class);
+                Intent i6 = new Intent(HomeActivity.this, CosemisterActivity.class);
                 startActivity(i6);
             }
         });

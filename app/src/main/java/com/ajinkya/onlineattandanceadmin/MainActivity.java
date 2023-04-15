@@ -8,13 +8,6 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.ProgressBar;
 
-import com.ajinkya.onlineattandanceadmin.Advance_java_Programming;
-import com.ajinkya.onlineattandanceadmin.C_Programming;
-import com.ajinkya.onlineattandanceadmin.Cpp_Programming;
-import com.ajinkya.onlineattandanceadmin.Java_Programming;
-import com.ajinkya.onlineattandanceadmin.Javascript;
-import com.ajinkya.onlineattandanceadmin.PHP_Activity;
-import com.ajinkya.onlineattandanceadmin.R;
 import com.google.android.material.card.MaterialCardView;
 
 public class MainActivity extends AppCompatActivity {
@@ -44,7 +37,7 @@ ProgressBar c_progressbar;
         main_mcv_c.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent i = new Intent(MainActivity.this,C_Programming.class);
+                Intent i = new Intent(MainActivity.this, C_Programming.class);
                 startActivity(i);
             }
         });

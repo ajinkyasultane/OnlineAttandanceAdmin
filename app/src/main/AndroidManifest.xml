@@ -14,10 +14,28 @@
         android:theme="@style/Theme.OnlineAttandanceAdmin"
         tools:targetApi="31">
         <activity
-            android:name=".SubjectActivity"
+            android:name=".Co_third_sem_subject"
             android:exported="false" />
         <activity
-            android:name=".SemisterActivity"
+            android:name=".Co_second_sem_subject"
+            android:exported="false" />
+        <activity
+            android:name=".Co_first_sem_ict"
+            android:exported="false" />
+        <activity
+            android:name=".Co_first_sem_basic_science"
+            android:exported="false" />
+        <activity
+            android:name=".Co_first_sem_math"
+            android:exported="false" />
+        <activity
+            android:name=".Co_first_sem_English"
+            android:exported="false" />
+        <activity
+            android:name=".co_first_sem_subject"
+            android:exported="false" />
+        <activity
+            android:name=".CosemisterActivity"
             android:exported="false" />
         <activity
             android:name=".MainActivity"
@@ -36,9 +54,6 @@
             android:exported="false" />
         <activity
             android:name=".Cpp_Programming"
-            android:exported="false" />
-        <activity
-            android:name=".C_Programming"
             android:exported="false" />
         <activity
             android:name=".HomeActivity"
